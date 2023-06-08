@@ -4,7 +4,7 @@
 	box-sizing:border-box;
 	font-family:sans-serif;
 }
-	.col-lg-1{
+.col-lg-1{
 width:8.33%;
 }
 .col-lg-2{
@@ -51,21 +51,63 @@ width:8.33%;
 	width:80%;
 	margin:0 auto;
 }
-nav{
-	display:flex;
-	justify-content:space-between;
-	line-height:80px;		
-	border-bottom:1px solid #ccc;
-	background-color:black;
-}
-.active{
-	color:#66fcf1 !important;
-}
+
 .header{
-	position:sticky;
+	width:100%;
+	padding: 20px 0;
+    position:sticky;
 	top:0;
 	z-index:10;
+	background:black;
 }
+li{
+	list-style:none;
+}
+a{
+	color:white;
+	text-decoration:none;
+	font-weight:550;
+}
+.nav-container{ 
+    width:100%; 
+    margin:auto;
+} 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        }
+.nav-menu {
+    display: flex;
+	justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+        }
+.nav-branding {
+    font-size: 35px;
+	color:rgba(0, 0, 0, 0.76);
+	font-weight: 600;
+        }
+.nav-link {
+    transition: 0.7s ease;
+	font-size:17px;
+        }
+.nav-link:hover {
+    color:#43cfd7;
+        }
+.hamburger {
+    display: none;
+    cursor: pointer;
+        }
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin:  5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background:white;
+        }
 .logo{
 	font-size:30px;
 	font-weight:800;
@@ -76,32 +118,10 @@ nav{
 }
 .logo span{
 	color:#66FCF1;
+	border-radius:10px;
 }
-.navitem{
-	display:flex;
-}
-.navitem li{
-	list-style:none;
-	margin:0 15px;
-}
-.navitem li a{
-	font-size:20px;
-	color:white;
-	letter-spacing:3px;
-	text-decoration:none;
-	text-transform:capitalize;
-}
-.navitem li:hover a{
-	color:#66FCF1;
-}
-
-.links a{
-	font-size:20px;
-	color:white;
-	margin:0 5px;
-}
-.links a:hover i{
-		color:#66FCF1;
+.nav-menu #active{
+color:#66FCF1 !important;
 }
 .head{
 	color:white;
@@ -266,7 +286,7 @@ nav{
 	position:absolute;
 	top:0;
     left:0;
-	background:#45a29e;
+	background:#45a29ea3;
 	transition:all .3s ease;
 	z-index:-999;
 	border-radius:10px;
@@ -294,7 +314,7 @@ nav{
 	min-height:35vh;
 }
 .ugcard :hover h2{
-	color:#1f2833;
+	color:black;
 	/* text-decoration:underline; */
 	
 }
@@ -302,7 +322,7 @@ nav{
 	color:white;
 }
 .ugcard :hover span{
-	color:#1f2833;
+	color:black;
 }
 .ug h2{
 	color:#45a29e;
@@ -640,10 +660,12 @@ nav{
 @media (min-width:768px) and (max-width:992px){
     .navitem,.links{
 		display:none;
+		
 	}
 	.dropdown{
 		display:block;
 	}
+	
 	.headcontent h1{
 		font-size:48px;
 	}
@@ -665,6 +687,41 @@ nav{
 	}
 	
 }
+ @media(max-width:992px) {
+        .hamburger {
+            display: block;
+        }
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+            }
+        .hamburger.active .bar:nth-child(1) {
+             transform: translateY(8px) rotate(45deg);
+            }
+        .hamburger.active .bar:nth-child(3) {
+             transform: translateY(-8px) rotate(-45deg);
+            }
+			a{
+	color:white;
+	text-decoration:none;
+	
+}
+.nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        gap: 0;
+        flex-direction: column;
+        background:black;
+        width: 100%;
+            }
+.nav-item {
+        margin: 12px 0;
+		/* font-size: 42px; */
+            }
+.nav-menu.active {
+        left: 0;
+            }
+        }
 @media (min-width:992px){
 		.col-lg-1{
 width:8.33%;

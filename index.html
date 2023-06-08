@@ -14,33 +14,52 @@
 </video>
 
 <section class="container">
-<div class="header" id="home-sec">
-   <nav>
-     <div class="logo">folio<span>.</span></div>
-		 <ul class="navitem"> 
-			<li><a href="#home-sec" class="active">Home</a></li>
-			<li><a href="#abt-sec">About</a></li>
-			<li><a href="#education-sec">Education</a></li>
-			<li><a href="#project-sec">Project</a></li>
-			<li><a href="#skill-sec">Skills</a></li>
-			<li><a href="#contact-sec">Contact</a></li>
-		 </ul>
-	 <div  class="links">
-	    <a href="https://www.instagram.com/yourboy_vicky_07/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-		 <a href="https://www.facebook.com/profile.php?id=100032235195337"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-		  <a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-     </div>
-	 <div class="dropdown" onclick="start">
-	     <i class="fa fa-bars" aria-hidden="true"></i>
-	 </div>
+<!-- <div class="header" id="home-sec"> -->
+   <!-- <nav> -->
+     <!-- <div class="logo">folio<span>.</span></div> -->
+		 <!-- <ul class="navitem">  -->
+			<!-- <li><a href="#home-sec" class="active">Home</a></li> -->
+			<!-- <li><a href="#abt-sec">About</a></li> -->
+			<!-- <li><a href="#education-sec">Education</a></li> -->
+			<!-- <li><a href="#project-sec">Project</a></li> -->
+			<!-- <li><a href="#skill-sec">Skills</a></li> -->
+			<!-- <li><a href="#contact-sec">Contact</a></li> -->
+		 <!-- </ul> -->
+	 <!-- <div  class="links"> -->
+	    <!-- <a href="https://www.instagram.com/yourboy_vicky_07/"><i class="fa fa-instagram" aria-hidden="true"></i></a> -->
+		 <!-- <a href="https://www.facebook.com/profile.php?id=100032235195337"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> -->
+		  <!-- <a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> -->
+     <!-- </div> -->
+	 <!-- <div class="dropdown" onclick="start"> -->
+	     <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+	 <!-- </div> -->
 	 
 	 
-   </nav>
-   </div>
+   <!-- </nav> -->
+   <!-- </div> -->
+   			<header class="header" data-aos="fade-down" data-aos-duration="1500">
+				<div class="nav-container">
+					<nav class="navbar">
+					 <div class="logo">folio<span>.</span></div> 
+				<ul class="nav-menu">
+						<li class="nav-item" > <a href="#home-sec" id="active" class="nav-link">Home</a></li>
+						<li class="nav-item"> <a href="#abt-sec"class="nav-link">About</a></li>
+						<li class="nav-item"> <a href="#education-sec" class="nav-link">Education</a></li>
+						<li class="nav-item"> <a href="#project-sec" class="nav-link">Project</a></li>
+						<li class="nav-item"> <a href="#skill-sec" class="nav-link">Skills</a></li>
+						<li class="nav-item"> <a href="#contact-sec" class="nav-link">Contact</a></li>
+					</ul>
+					<div class="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+				</nav>
+			</header>
    
    <div class="head">
    <div class="col-lg-12">
-	   <div class="headcontent" data-aos="zoom-out-left"  data-aos-duration="2500">
+	   <div class="headcontent">
 				 <span class="topline">Hello</span>
 				 <h1>I'm <span>S.Vignesh</span></h1>
 				 <h2><span class="multitext"></span>...</h2>
@@ -72,7 +91,7 @@
 				     </div>
 				   </div>
 	   <div class="aboutlink">
-			    <a href="vignesh.pdf" downloaded><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>DOWNLOAD CV</a>
+			    <a href="S.VIGNESH CV.pdf" downloaded><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>DOWNLOAD CV</a>
        </div>
 	   </div>
 	   </div>
@@ -208,7 +227,7 @@
 									<div class="parcial">
 										<div class="skill-info">
 											<div class="skill-name">HTML</div>
-											<div class="skill-pre">86%</div>
+											<div class="skill-pre">90%</div>
 										</div>
 										<div class="progressBar">
 											<div class="percentagem" style="width:86%"></div>
@@ -261,7 +280,7 @@
 									<div class="parcial">
 										<div class="skill-info">
 											<div class="skill-name">Communication</div>
-											<div class="skill-pre">72%</div>
+											<div class="skill-pre">70%</div>
 										</div>
 										<div class="progressBar">
 											<div class="percentagem" style="width:72%"></div>
@@ -283,7 +302,7 @@
 									<div class="parcial">
 										<div class="skill-info">
 											<div class="skill-name">Logical Thinking</div>
-											<div class="skill-pre">52%</div>
+											<div class="skill-pre">60%</div>
 										</div>
 										<div class="progressBar">
 											<div class="percentagem" style="width:52%"></div>
@@ -399,6 +418,19 @@
 	   nav.style.display="block";
 	}
 </script>
-
+<script>
+ const hamburger = document.querySelector(".hamburger");
+				const navMenu = document.querySelector(".nav-menu");
+		
+				hamburger.addEventListener("click", () => {
+					hamburger.classList.toggle("active");
+					navMenu.classList.toggle("active");
+				})
+		
+				document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click" , () => {
+					hamburger.classList.remove("active");
+					navMenu.classList.remove("active");
+				}))
+</script>
 </body>
 </html>
